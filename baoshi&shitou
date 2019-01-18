@@ -1,0 +1,33 @@
+知识点总结：
+1.队列表达式的使用规范与方法。
+2.sum(数值型对象求和) count(对象在列表形数据结构的次数求和)方法练习。
+3.列表，元祖，字典，集合同与异
+4.在python中，非配内存开销与使用函数开销性能对比。暂无结果，需求证。
+
+一
+return sum(1  for i in S  if i in J)
+二
+return sum(S.count(i) for i in J)
+三        
+sum = 0
+for i in J:
+    a = S.count(i)
+    sum += a
+retrun(sum)
+
+
+'''
+salt = ''.join(random.sample(string.ascii_letters + string.digits, 50))
+print(salt)
+
+J = set(input("请输入你拥有的宝石："))
+S = list(input("请输入你拥有的石头："))
+sum = 0
+if (len(J) & len(S)) <= 50:
+    for i in J:
+        a = S.count(i)
+        sum += a
+        print("石头中%s是宝石，一共有%d个"%(i,a))
+    print("石头中一共有%d个宝石"%sum)
+else:
+    print("50限制")
